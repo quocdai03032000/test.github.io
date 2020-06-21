@@ -2,111 +2,115 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title> selftaught </title>
+    <script src="https://kit.fontawesome.com/18e86ddea8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="./resources/css/styles.css">
 </head>
 
 <body>
-
-    <div class="name-of-form">
-        <h3>Hồ Sơ Đăng Ký</h3>
-    </div>
-    <div class="form">
-        <table class="cover">
-            <tr class="infor">
-                <td>
-                    <span>Thông tin đăng nhập</span>
-                </td>
-                <td>
-                    <span>Thông tin khách hàng</span>
-
-                </td>
-            </tr>
-            <tr>
-                <td class="infor-box">
-                    <div class="inside-infor">
-                        <label>Tên đăng nhập</label>
-                        <input id="user-name" type="text"></input>
-                    </div>
-                    <div class="inside-infor">
-                        <label>Mật khẩu</label>
-                        <input id="password" type="password"></input>
-                    </div>
-                    <div class="inside-infor">
-                        <label>Nhập lại mật khẩu</label>
-                        <input id="retype-password" type="password"></input>
-                    </div>
-                </td>
-                <td rowspan="3" id="show-infor">
-                    <div class="cover-infor">
-                        <ul>
-                            <li id="name-of-client"> </li>
-                            <li id="TDN"> </li>
-                            <li id="pass"> </li>
-                            <li id="Date-of-clients"> </li>
-                            <li id="sex"> </li>
-                            <li id="email-of-clients"> </li>
-                            <li id="address-of-clients"> </li>
-                            <li id="phoneNumber-of-clients"> </li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="infor"><span>Thông tin cá nhân</span></td>
-            </tr>
-            <tr>
-                <td class="infor-box1">
-                    <div class="inside-infor">
-                        <label>Họ tên khách hàng</label>
-                        <input id="name" type="text"></input>
-                    </div>
-                    <div class="inside-infor">
-                        <label for="cars">Ngày sinh:</label>
-                        <div class="cover-date">
-                            <select id="dd">
-                        </select>
-                            <select id="mm" onchange="selectDate()">
-                        </select>
-                            <select id="yyyy" onchange="selectDate()">
-                        </select>
-                        </div>
-                    </div>
-                    <div class="inside-infor">
-                        <label>Email</label>
-                        <input id="email" type="text"></input>
-                        </d:iv>
-                        <div class="inside-infor">
-                            <div>
-                                <label>Giới tính</label>
-                                <div class="options1">
-                                    <input type="radio" name="sex" value="Nam" checked="checked" />Nam</div>
-                                <div class="options2">
-                                    <input type="radio" name="sex" value="Nu" /> Nữ</div>
-                            </div>
-                            <div class="inside-infor-address">
-                                <label>Địa chỉ</label>
-                                <textarea id="address" classtype="text"></textarea>
-                            </div>
-                            <div class="inside-infor">
-                                <label>Điện thoại</label>
-                                <input type="text" id="phoneNumber" name="phone" placeholder="+84" pattern="[0-9]{10}" required>
-                            </div>
-                            <div class="inside-infor">
-                                <div class="sign">
-                                    <button type="submit" onclick="getUserName();getPassWord();checkPassword();getName();getSex();getAddress();getEmail();getPhoneNumber();getDate()">Đăng ký</button>
-                                </div>
-                            </div>
-                </td>
-            </tr>
-        </table>
+    <header>
+        <a href="#"><img class="logo" src="./resources/img/logo.png" alt="logo"></a>
+        <ul class="main-nav">
+            <li><a href="#">How clients think</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="heading-main-box">
+                <h1>
+                    We will study <br> English together. <br>
+                    So join with us.
+                </h1>
+                <a href="#" class="btn">Tell me more</a>
+                <a href="#" class="btn">Join us</a>
+            </div>
         </div>
-        <script type="text/javascript" src="getdate.js"></script>
-        <script type="text/javascript" src="getTTKH.js"></script>
-</body>
+    </header>
 
+    <section class="about-section">
+        <div class="row">
+            <h2>About us</h2>
+            <p class="p-long">
+                We are people that are studying English by ourselves, we believe that you don’t need to pay so much
+                money for being good at English, we’re here to help you
+            </p>
+        </div>
+        <div class="row">
+            <div class="col span_1_of_4 about-picture">
+                <!--phần nay là tạo ra 4 cột với cú pháp .col.span_1_of_4.about-picture  -->
+                <img src="./resources/img/activities1.jpeg" alt="hinh1">
+                <p class="picture-title">
+                    Team working
+                </p>
+            </div>
+            <div class="col span_1_of_4 about-picture">
+                <img src="./resources/img/activities2.jpeg" alt="hinh2">
+                <p class="picture-title">
+                    Funny class
+                </p>
+            </div>
+            <div class="col span_1_of_4 about-picture">
+                <img src="./resources/img/activities3.jpeg" alt="hinh3">
+                <p class="picture-title">
+                    Be confident
+                </p>
+            </div>
+            <div class="col span_1_of_4 about-picture">
+                <img src="./resources/img/activities4.jpeg" alt="hinh4">
+                <p class="picture-title">
+                    All our friend
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="products-section">
+        <h2>Products</h2>
+        <div class="row">
+            <div class="col span_1_of_3">
+                <div class="products-box">
+                    <h3>Pronunciation class</h3>
+                    <p class="products-price">19$ <span>/ month</span></p>
+                    <ul>
+                        <li><i class="fas fa-check small-icon"></i>Native voices</li>
+                        <li><i class="fas fa-check small-icon"></i>Master IPA</li>
+                    </ul>
+                    <a href="#" class="btn">JOIN US</a>
+                </div>
+            </div>
+            <div class="col span_1_of_3">
+                <div class="products-box">
+                    <h3>Speaking class</h3>
+                    <p class="products-price">25$ <span>/ month</span></p>
+                    <ul>
+                        <li><i class="fas fa-check small-icon"></i>Native speaking</li>
+                        <li><i class="fas fa-check small-icon"></i>Speaking naturally</li>
+                    </ul>
+                    <a href="#" class="btn">JOIN US</a>
+                </div>
+            </div>
+
+            <div class="col span_1_of_3">
+                <div class="products-box">
+                    <h3>Listening class</h3>
+                    <p class="products-price">25$ <span>/ month</span></p>
+                    <ul>
+                        <li><i class="fas fa-check small-icon"></i>Native speech</li>
+                        <li><i class="fas fa-check small-icon"></i>Hearing English clearly</li>
+                    </ul>
+                    <a href="#" class="btn">JOIN US</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
 
 </html>
